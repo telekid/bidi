@@ -1,6 +1,6 @@
 ;; Copyright © 2014, JUXT LTD.
 
-(defproject bidi "2.1.2"
+(defproject org.clojars.hz/bidi "2.1.2-SNAPSHOT"
   :description "Bidirectional URI routing"
   :url "https://github.com/juxt/bidi"
 
@@ -28,13 +28,13 @@
                                   [criterium "0.4.3"]
                                   [org.mozilla/rhino "1.7.7.1"]]}}
 
-  :aliases {"deploy" ["do" "clean," "deploy" "clojars"]
-            "test" ["do" "clean," "test," "doo" "rhino" "test" "once"]}
+  ;; :aliases {"deploy" ["do" "clean," "deploy" "clojars"]
+  ;;           "test" ["do" "clean," "test," "doo" "rhino" "test" "once"]}
 
   :jar-exclusions [#"\.swp|\.swo|\.DS_Store"]
 
-  :lein-release {:deploy-via :shell
-                 :shell ["lein" "deploy"]}
+  ;; :lein-release {:deploy-via :shell
+  ;;                :shell ["lein" "deploy"]}
 
   :doo {:paths {:rhino "lein run -m org.mozilla.javascript.tools.shell.Main"}}
 
